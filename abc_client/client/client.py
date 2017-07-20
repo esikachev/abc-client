@@ -3,10 +3,18 @@ from requests import post
 
 
 class Client(object):
-    @staticmethod
-    def _post(*args, **kwargs):
+    def __init__(self):
+        self.host = 'http://127.0.0.1:5000'
+
+    def _post(self, *args, **kwargs):
         return post(*args, **kwargs)
 
-    @staticmethod
-    def _get(*args):
+    def _get(self, *args):
         return get(*args)
+
+    def post(self, prefix, *args, **kwargs):
+        request = self._post(self.get_url(prefix), *args, **kwargs)
+        return request.json()
+
+    def get_url(self, prefix):
+        return "{}/{}".format(self.host, prefix)

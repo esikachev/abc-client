@@ -17,4 +17,4 @@ def main():
     rest_client = rest.REST()
 
     if args.init:
-        rest_client.post('init')
+        rest_client.init()
