@@ -3,8 +3,10 @@ from requests import post
 
 
 class Client(object):
-    def _post(self, *args, **kwargs):
+    @staticmethod
+    def _post(*args, **kwargs):
         return post(*args, **kwargs)
 
-    def _get(self, *args):
+    @staticmethod
+    def _get(*args):
         return get(*args)
