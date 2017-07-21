@@ -9,7 +9,10 @@ then
   do
     if [ -f /tmp/server.log ]
     then
-      if [ "$(grep -c "Running on" /tmp/server.log)" == 1 ]; then break; fi
+      if [ "$(grep -c "Running on" /tmp/server.log)" == 1 ]
+      then
+        break
+      fi
     fi
     sleep 2
   done
