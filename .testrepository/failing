@@ -1,0 +1,29 @@
+time: 2017-07-21 14:00:12.606498Z
+tags: worker-0
+test: test_init.TestScenario.test_init
+time: 2017-07-21 14:00:13.446626Z
+failure: test_init.TestScenario.test_init [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+3DC
+Traceback (most recent call last):
+  File "/home/ubuntu/abc-client/abc_client/tests/integration/test_init.py", line 17, in test_init
+    self.init()
+  File "/home/ubuntu/abc-client/abc_client/tests/integration/test_init.py", line 12, in init
+    self.rest_client.init()
+  File "abc_client/client/rest.py", line 6, in init
+    self.post('init')
+  File "abc_client/client/client.py", line 19, in post
+    return request.json()
+  File "/home/ubuntu/abc-client/.tox/integration/local/lib/python2.7/site-packages/requests/models.py", line 894, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+0
+]
+tags: -worker-0

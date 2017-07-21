@@ -1,0 +1,7 @@
+time: 2017-07-21 13:37:08.957354Z
+tags: worker-0
+test: test_scenario.TestScenario.test_scenario
+time: 2017-07-21 13:37:08.960137Z
+successful: test_scenario.TestScenario.test_scenario [ multipart
+]
+tags: -worker-0

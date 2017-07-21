@@ -1,0 +1,15 @@
+time: 2017-07-21 13:59:01.916772Z
+tags: worker-0
+test: test_scenario.TestScenario.test_init
+time: 2017-07-21 13:59:01.918885Z
+failure: test_scenario.TestScenario.test_init [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+E8
+Traceback (most recent call last):
+  File "/home/ubuntu/abc-client/abc_client/tests/integration/test_scenario.py", line 13, in test_init
+    if os.path.exists(utils.from_home_dir(".abc")):
+NameError: global name 'os' is not defined
+0
+]
+tags: -worker-0

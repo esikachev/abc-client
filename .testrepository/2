@@ -1,0 +1,11 @@
+time: 2017-07-21 13:59:55.435860Z
+tags: worker-0
+test: test_init.TestScenario.test_init
+time: 2017-07-21 13:59:55.437761Z
+skip: test_init.TestScenario.test_init [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+19
+.abc is exist in home-dir0
+]
+tags: -worker-0
