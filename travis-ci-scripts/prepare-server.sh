@@ -2,7 +2,7 @@
 
 git clone https://github.com/esikachev/abc-server
 cd abc-server
-tox -e venv -- abc-server -e ${GITHUB_USERNAME} -p ${GITHUB_PASSWORD} &> /tmp/server.log &
+tox -e venv -- abc-server -e ${GITHUB_EMAIL} -p ${GITHUB_PASSWORD} &> /tmp/server.log &
 while true
 do
   if [ -f /tmp/server.log ]
