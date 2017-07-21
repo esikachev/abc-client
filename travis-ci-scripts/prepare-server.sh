@@ -10,4 +10,5 @@ do
     if [[ "$(grep -c "Running on" /tmp/server.log)" == 1 ]]; then break; fi
   fi
   sleep 2
+done
 cd -
