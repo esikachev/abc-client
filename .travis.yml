@@ -5,9 +5,23 @@ python:
 
 env:
   - TOX_ENV=pep8
+  - TEST_FUNCTIONAL=true
 
 before_install:
   - pip install tox
+  - 'if [ ${TEST_FUNCTIONAL} = "true" ]
+     then
+       ./travis-ci-scripts/prepare-server.sh;
+     fi'
 
 script:
-  - tox -e $TOX_ENV
+  - 'if [ ${TEST_FUNCTIONAL} = "true" ]; then
+         tox -e venv -- abc --init;
+     else
+         tox -e ${TOX_ENV};
+     fi'
+
+after_script:
+  - 'if [ -f /tmp/server.log ]; then
+        cat /tmp/server.log;
+    fi' 
