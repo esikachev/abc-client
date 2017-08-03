@@ -7,6 +7,6 @@ class REST(client.Client):
 
     def sync(self):
         self.post('sync')
-    
+
     def apply(self):
         self.post('apply')
