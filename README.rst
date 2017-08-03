@@ -20,3 +20,10 @@ This is the client for abc-server located at https://github.com/esikachev/abc-se
 
     $ tox -e venv -- abc --add ~/.vimrc
 ..
+
+4. Run command for upload files to remote repo
+
+.. sourcecode:: console
+
+    $ tox -e venv -- abc --sync
+..
