@@ -27,3 +27,10 @@ This is the client for abc-server located at https://github.com/esikachev/abc-se
 
     $ tox -e venv -- abc --sync
 ..
+
+5. Run command for apply files to local host
+
+.. sourcecode:: console
+
+    $ tox -e venv -- abc --apply
+..

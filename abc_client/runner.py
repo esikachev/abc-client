@@ -13,6 +13,8 @@ def get_parser():
                         help='Specify the files for adding')
     parser.add_argument('--sync', default=False, action='store_true',
                         help='Upload local files to remote')
+    parser.add_argument('--apply', default=False, action='store_true',
+                        help='Apply files to your host')
     return parser
 
 
@@ -23,6 +25,7 @@ def main():
     add_cmd = args.add
     add_cmd = utils.check_path(add_cmd)
     sync_cmd = args.sync
+    apply_cmd = args.apply
 
     rest_client = rest.REST()
 
@@ -32,3 +35,5 @@ def main():
         add.add(add_cmd)
     elif sync_cmd:
         rest_client.sync()
+    elif apply_cmd:
+        rest_client.apply()
