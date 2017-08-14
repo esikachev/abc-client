@@ -21,14 +21,21 @@ This is the client for abc-server located at https://github.com/esikachev/abc-se
     $ tox -e venv -- abc --add ~/.vimrc
 ..
 
-4. Run command for upload files to remote repo
+4. Run command for rm file from watcher
+
+.. sourcecode:: console
+
+    $ tox -e venv -- abc --rm ~/.vimrc
+..
+
+5. Run command for upload files to remote repo
 
 .. sourcecode:: console
 
     $ tox -e venv -- abc --sync
 ..
 
-5. Run command for apply files to local host
+6. Run command for apply files to local host
 
 .. sourcecode:: console
 
