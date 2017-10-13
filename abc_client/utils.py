@@ -18,7 +18,7 @@ def write_to_file(file_name, data):
 
 
 def read_from_file(file_name):
-    with open(file_name, 'r') as f:
+    with open(file_name, 'w+') as f:
         return yaml.load(f)
 
 
