@@ -17,8 +17,14 @@ def write_to_file(file_name, data):
         yaml.safe_dump(data, f, default_flow_style=False)
 
 
+def create_file(file_name):
+    open(file_name, 'a').close()
+
+
 def read_from_file(file_name):
-    with open(file_name, 'r') as f:
+    if not os.path.isfile(file_name):
+        create_file(file_name)
+    with open(file_name, 'r+') as f:
         return yaml.load(f)
 
 
